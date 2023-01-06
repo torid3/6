@@ -25,3 +25,55 @@ new Swiper(".mySwiper", {
     },
   },
 });
+
+const type = document.querySelector("#type");
+const duration = document.querySelector("#duration");
+const money = document.querySelector("#money");
+
+duration.appendChild(new Option("6 месяцев - 20%", "0.2"));
+duration.appendChild(new Option("1 год - 22%", "0.22"));
+duration.appendChild(new Option("1,5 года - 15%", "0.15"));
+duration.appendChild(new Option("2 года - 10%", "0.1"));
+
+type.addEventListener("change", (event) => {
+  switch (event.target.value) {
+    case "1":
+      /*optt.setAttribute("style", "display:none");*/
+      while (duration.firstChild) {
+        duration.removeChild(duration.firstChild);
+      }
+      duration.appendChild(new Option("6 месяцев - 20%", "0.2"));
+      duration.appendChild(new Option("1 год - 22%", "0.22"));
+      duration.appendChild(new Option("1,5 года - 15%", "0.15"));
+      duration.appendChild(new Option("2 года - 10%", "0.1"));
+      break;
+    case "2":
+      while (duration.firstChild) {
+        duration.removeChild(duration.firstChild);
+      }
+      duration.appendChild(new Option("3 месяца - 20%", "0.2"));
+      duration.appendChild(new Option("6 месяцев - 22%", "0.2"));
+      duration.appendChild(new Option("9 месяцев - 23%", "0.23"));
+      duration.appendChild(new Option("1 год - 24%", "0.24"));
+      duration.appendChild(new Option("1,5 года - 18%", "0.18"));
+      duration.appendChild(new Option("2 года - 15%", "0.15"));
+      break;
+  }
+});
+
+const result = document.querySelector(".result");
+
+document.querySelector("#calculate").addEventListener("click", (event) => {
+  console.log("hehheheeh");
+  result.textContent = `Вклад "${
+    type.options[type.selectedIndex].text
+  }" на срок "${duration.options[duration.selectedIndex].text}" на сумму ${
+    money.value
+  } руб.\n
+    В конце срока вы получите ${
+      parseFloat(money.value) +
+      parseFloat(
+        money.value * parseFloat(duration.options[duration.selectedIndex].value)
+      )
+    } руб.`;
+});

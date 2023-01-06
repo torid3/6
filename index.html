@@ -36,23 +36,12 @@
         <div class="dep-info">
           Вид вклада
           <select class="dep-type" id="type">
-            <option value="replenished">Пополняемый</option>
-            <option value="term">Срочный</option>
+            <option value="1">Пополняемый</option>
+            <option value="2">Срочный</option>
           </select>
           <br />
           Срок вклада
-          <select class="dep-duration" id="duration">
-            <option value="t3m">3 месяца - 20%</option>
-            <option value="t6m">6 месяцев - 22%</option>
-            <option value="t9m">9 месяцев - 23%</option>
-            <option value="t1y">1 год - 24%</option>
-            <option value="t1.5y">1,5 года - 18%</option>
-            <option value="t2y">2 года - 15%</option>
-            <option value="r6m">6 месяцев - 20%</option>
-            <option value="r1y">1 год - 22%</option>
-            <option value="r1.5y">1,5 года - 15%</option>
-            <option value="r2y">2 года - 10%</option>
-          </select>
+          <select class="dep-duration" id="duration"></select>
           <br />
           <input
             type="number"
@@ -64,14 +53,11 @@
           <br />
           <button id="calculate">Рассчитать</button>
         </div>
-        <div class="result">
-          <p>Р ss</p>
-        </div>
+        <div class="result"></div>
       </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="deposit.js"></script>
   </body>
 </html>
