@@ -36,3 +36,21 @@ body {
 h2 {
   text-align: center;
 }
+
+.dep {
+  background-color: white;
+  width: 500px;
+  display: flex;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.result {
+  margin: auto;
+}
+
+.dep-info {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}

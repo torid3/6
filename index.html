@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>Лабораторная работа №2</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -30,7 +30,48 @@
       <div class="swiper-pagination"></div>
     </div>
 
+    <div class="deposit">
+      <h2>И посчитаем ваши вклады</h2>
+      <form class="dep">
+        <div class="dep-info">
+          Вид вклада
+          <select class="dep-type" id="type">
+            <option value="replenished">Пополняемый</option>
+            <option value="term">Срочный</option>
+          </select>
+          <br />
+          Срок вклада
+          <select class="dep-duration" id="duration">
+            <option value="t3m">3 месяца - 20%</option>
+            <option value="t6m">6 месяцев - 22%</option>
+            <option value="t9m">9 месяцев - 23%</option>
+            <option value="t1y">1 год - 24%</option>
+            <option value="t1.5y">1,5 года - 18%</option>
+            <option value="t2y">2 года - 15%</option>
+            <option value="r6m">6 месяцев - 20%</option>
+            <option value="r1y">1 год - 22%</option>
+            <option value="r1.5y">1,5 года - 15%</option>
+            <option value="r2y">2 года - 10%</option>
+          </select>
+          <br />
+          <input
+            type="number"
+            min="0"
+            class="money-cl"
+            id="money"
+            placeholder="Сумма, руб"
+          />
+          <br />
+          <button id="calculate">Рассчитать</button>
+        </div>
+        <div class="result">
+          <p>Р ss</p>
+        </div>
+      </form>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="deposit.js"></script>
   </body>
 </html>
